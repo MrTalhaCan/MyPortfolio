@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Api Useage</title>
+</head>
+<body onscroll="scroll()">
+    <main>  
+            <nav>
+                <div>
+                    <img src="./tmdb.svg" src="Filmler">
+                </div>
+                <img src="./filter.svg" width="45px">
+                <ul>
+                    <li onclick="getMovies('https:\/\/api.themoviedb.org/3/discover/movie?with_genres=18&primary_release_year=2022&api_key=a5508f22d7d172241e275116e2501c52&page=1')">2022 Films</li>
+                    <li onclick="getMovies('https:\/\/api.themoviedb.org/3/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=a5508f22d7d172241e275116e2501c52')">For Kids</li>
+                    <li onclick="getMovies('https:\/\/api.themoviedb.org/3/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10&api_key=a5508f22d7d172241e275116e2501c52')">Drama Films</li>
+                </ul>
+            </nav>
+            <div class="m-nav">
+                <ul>
+                    <li onclick="getMovies('https:\/\/api.themoviedb.org/3/discover/movie?with_genres=18&primary_release_year=2022&api_key=a5508f22d7d172241e275116e2501c52&page=1')">2022 Films</li>
+                    <li onclick="getMovies('https:\/\/api.themoviedb.org/3/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=a5508f22d7d172241e275116e2501c52')">For Kids</li>
+                    <li onclick="getMovies('https:\/\/api.themoviedb.org/3/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10&api_key=a5508f22d7d172241e275116e2501c52')">Drama Films</li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="movies">
+                </div>
+            </div>
+    </main>
+    <footer>I developed this page for my portfolio - Talha Can</footer>
+    <script src="js.js"></script>
+</body>
+</html>

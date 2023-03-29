@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ary   =   [1,2,2,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
+        let toplam  =   0;
+        const aralik    =   10;
+        let sira        =   1;
+        ary.forEach((eleman, index) => {
+            toplam  +=   eleman;
+            if(index === (aralik * sira) - 1){
+                console.log(toplam/aralik);
+                toplam  =   0;
+                sira    +=  1;
+            }
+        });
+        let result = function getMostFrequent(prm) {
+            const hashmap = prm.reduce( (acc, val) => {
+                acc[val] = (acc[val] || 0 ) + 1
+                return acc
+            },{})
+            return Object.keys(hashmap).reduce((a, b) => hashmap[a] > hashmap[b] ? a : b)
+        }
+        console.log(result(ary))
+    </script>
+</body>
+</html>
